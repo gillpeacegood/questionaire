@@ -4,21 +4,21 @@
 
 export type Questionaire = {[key: string]: Question};
 
-type Question = {
+export type Question = {
     sound: string,
     text: string,
     responses: Array< Response>
 };
 
-type Response = {
+export type Response = {
     text: string,
     nextQuestion: string
 };
 
-export const questionaire  = {
+const questionaire : Questionaire = {
     a: {
             sound: 'question1.mp3',
-            text: 'This is my first question in case you cant here the sound',
+            text: `This is my first question in case you can't hear the sound`,
             responses: [
                 {
                     text: 'This is the first choice',
@@ -41,3 +41,5 @@ export const questionaire  = {
             responses: []
         }
 };
+
+export default questionaire;
