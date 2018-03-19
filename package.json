@@ -1,16 +1,13 @@
 {
-  "name": "questionaire",
+  "name": "eliza-speaks",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "elizabot": "^0.0.2",
+    "mespeak": "^2.0.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.1.1",
-    "react-sound": "^1.1.0",
-    "redux": "^3.7.2"
-  },
-  "devDependencies": {
-    "flow-bin": "^0.65.0"
+    "react-scripts": "1.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
