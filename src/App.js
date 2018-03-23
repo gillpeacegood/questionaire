@@ -21,7 +21,13 @@ class App extends Component {
   }
 
   handleSubmit = (event) => {
-    this.setState({question: eliza.transform(this.state.answer)});
+    this.setState(
+      {
+        question: eliza.transform(this.state.answer),
+        answer: ""
+      }
+    );
+    //Speak.speak(question);
     event.preventDefault();
   }
 
