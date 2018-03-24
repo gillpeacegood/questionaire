@@ -26,14 +26,19 @@ class App extends Component {
 
   handleSubmit = (event) => {
     let question = eliza.transform(this.state.answer);
-    meSpeak.speak(question);
+    meSpeak.speak(question, {
+      wordgap: 9, 
+      pitch: 18,
+      speed: 120,
+  
+
+    });
     this.setState(
       {
         question,
         answer: ""
       }
     );
-    //Speak.speak(question);
     event.preventDefault();
   }
 
@@ -43,7 +48,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Welcome to Eliza</h1>
+          <h1 className="App-title">SOMEONE TO TALK TO</h1>
         </header>
         <p>
           {question}
