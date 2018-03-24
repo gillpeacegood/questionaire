@@ -3,7 +3,10 @@ import logo from './logo.svg';
 import './App.css';
 
 import ElizaBot from 'elizabot';
-import Speak from 'mespeak';
+
+import meSpeak from 'mespeak';
+meSpeak.loadConfig(require('mespeak/src/mespeak_config.json'));
+meSpeak.loadVoice(require('mespeak/voices/en/en-us.json'));
 
 var eliza = new ElizaBot();
 
@@ -14,6 +17,7 @@ class App extends Component {
     super(props);
     const question = eliza.getInitial();
     this.state = {question, answer: ""};
+    console.log(meSpeak.isConfigLoaded(), meSpeak.isVoiceLoaded());
   }
 
   handleChange = (event) => {
@@ -21,9 +25,11 @@ class App extends Component {
   }
 
   handleSubmit = (event) => {
+    let question = eliza.transform(this.state.answer);
+    meSpeak.speak(question);
     this.setState(
       {
-        question: eliza.transform(this.state.answer),
+        question,
         answer: ""
       }
     );
@@ -33,6 +39,7 @@ class App extends Component {
 
   render() {
     const {question, answer} = this.state;
+
     return (
       <div className="App">
         <header className="App-header">
