@@ -1,6 +1,9 @@
 .App {
   text-align: center;
-
+  padding: 10px;
+  color: rgb(28, 128, 70);
+  font-size: 1.00em;
+  font-family: 'Courier New', Courier, monospace
 }
 
 .App-logo {
@@ -14,8 +17,12 @@
   color: rgb(28, 128, 70);
 }
 
+.Glowing {
+  animation: App-header-scale infinite 3s linear;
+}
+
 .App-title {
-  font-size: 1.5em;
+  font-size: 1.00em;
   font-family: 'Courier New', Courier, monospace
 }
 
@@ -23,7 +30,8 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+@keyframes App-header-scale {
+  0% { transform: scale(1, 1); color: rgb(28, 128, 70); }
+  50% { transform: scale(1.1, 1.1); color: rgb(15, 226, 103); }
+  100% { transform: scale(1, 1); color: rgb(28, 128, 70); }
 }

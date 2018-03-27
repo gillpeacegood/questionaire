@@ -2,13 +2,54 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import ElizaBot from 'elizabot';
+import ElizaBot from './elizabot';
 
 import meSpeak from 'mespeak';
 meSpeak.loadConfig(require('mespeak/src/mespeak_config.json'));
 meSpeak.loadVoice(require('mespeak/voices/en/en-us.json'));
 
 var eliza = new ElizaBot();
+
+class Say extends Component {
+
+  state = {
+    spokenOnce: false
+  }
+
+  stoppedTalking = () => {
+    this.setState({spokenOnce: true});
+    this.props.onTalking(false);
+  }
+
+  startedTalking = () => {
+    this.props.onTalking(true);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.question !== nextProps.question) {
+      this.setState({spokenOnce: false});
+    }
+  }
+  
+  render() {
+    if (!this.props.talking && !this.state.spokenOnce) { 
+      meSpeak.speak(this.props.question, {
+        wordgap: 7, 
+        pitch: 18,
+        speed: 120,
+      }, this.stoppedTalking);
+      this.startedTalking();
+    }
+    const classes = this.props.talking ? "App Glowing" : "App";
+    return <p className={classes}>{this.props.question}</p>;
+  }
+
+  componentWillUnmount() {
+    if (this.props.talking) {
+      meSpeak.stop();
+    }
+  }
+}
 
 class App extends Component {
 
@@ -17,7 +58,10 @@ class App extends Component {
     super(props);
     const question = eliza.getInitial();
     this.state = {question, answer: ""};
-    console.log(meSpeak.isConfigLoaded(), meSpeak.isVoiceLoaded());
+  }
+
+  talking = (talking) => {
+    this.setState({talking});
   }
 
   handleChange = (event) => {
@@ -26,13 +70,6 @@ class App extends Component {
 
   handleSubmit = (event) => {
     let question = eliza.transform(this.state.answer);
-    meSpeak.speak(question, {
-      wordgap: 9, 
-      pitch: 18,
-      speed: 120,
-  
-
-    });
     this.setState(
       {
         question,
@@ -42,20 +79,23 @@ class App extends Component {
     event.preventDefault();
   }
 
+  componentWillUnmount() {
+    eliza.getFinal();
+  }
+
   render() {
-    const {question, answer} = this.state;
+    const {question, answer, talking} = this.state;
+
+    const classes = talking? "App-header Glowing" : "App-header";
 
     return (
       <div className="App">
-        <header className="App-header">
+        <header className={classes}>
           <h1 className="App-title">SOMEONE TO TALK TO</h1>
         </header>
-        <p>
-          {question}
-        </p>
+        <Say question={question} talking={talking} onTalking={this.talking}/>
         <form onSubmit={this.handleSubmit}>
           <label>
-            Answer:
             <input value={answer} onChange={this.handleChange}/>
           </label>
           <input type="submit" value="Submit" />
