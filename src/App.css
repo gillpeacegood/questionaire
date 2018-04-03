@@ -1,18 +1,18 @@
 .App {
   text-align: center;
-  padding: 10px;
+  padding: 20px;
   color: rgb(28, 128, 70);
-  font-size: 1.00em;
+  font-size: 0.85em;
   font-family: 'Courier New', Courier, monospace
 }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  height: 100px;
 }
 
 .App-header {
-  height: 150px;
+  height: 210px;
   padding: 20px;
   color: rgb(28, 128, 70);
 }
@@ -22,16 +22,16 @@
 }
 
 .App-title {
-  font-size: 1.00em;
+  font-size: 0.85em;
   font-family: 'Courier New', Courier, monospace
 }
 
 .App-intro {
-  font-size: large;
+  font-size: small
 }
 
 @keyframes App-header-scale {
-  0% { transform: scale(1, 1); color: rgb(28, 128, 70); }
-  50% { transform: scale(1.1, 1.1); color: rgb(15, 226, 103); }
-  100% { transform: scale(1, 1); color: rgb(28, 128, 70); }
+  0% { transform: scale(0.95, 0.95); color: rgb(28, 128, 70); }
+  50% { transform: scale(1, 1); color: rgb(15, 226, 103); }
+  100% { transform: scale(0.95, 0.95); color: rgb(28, 128, 70); }
 }
