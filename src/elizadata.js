@@ -5,19 +5,19 @@
 // [cf: Communications of the ACM, Vol. 9, #1 (January 1966): p 36-45.]
 
 exports.elizaInitials = [
-	"How do you do.  Please tell me your problem.",
+	"How are you today? What seems to be the problem?. Do not be disconcerted  - you can tell me anything in confidence",
 // additions (not original)
-	"Please tell me what's been bothering you.",
-	"Is something troubling you ?"
+	"Would you like to tell me what has been on your mind lately? Has anything been troubling you? Feel free to talk to me about anything - I am here to help.",
+	"Hello. What seems to be the problem today? Can I do anything to help you ?"
 ];
 
 exports.elizaFinals = [
-	"Goodbye.  It was nice talking to you.",
+	"Goodbye. This was a good chat, I hope you feel better now. Hopefully we can discuss this further in our next session",
 // additions (not original)
-	"Goodbye.  This was really a nice talk.",
-	"Goodbye.  I'm looking forward to our next session.",
-	"This was a good session, wasn't it -- but time is over now.   Goodbye.",
-	"Maybe we could discuss this moreover in our next session ?   Goodbye."
+	"Goodbye.  This was really a nice talk, please come again if you have anything more to say.",
+	"Goodbye.  I'm looking forward your next visit.",
+	"This was a good session, wasn't it -- come see me again whenever you like if there's more on your mind.  Goodbye.",
+	"I'd love to discuss these issues with you at more depth later. We could talk about this more in our next session, okay ?   Goodbye."
 ];
 
 exports.elizaQuits = [
@@ -29,9 +29,9 @@ exports.elizaQuits = [
 ];
 
 exports.elizaPres = [
-	"dont", "don't",
-	"cant", "can't",
-	"wont", "won't",
+	"dont", "do not",
+	"cant", "can not",
+	"wont", "will not",
 	"recollect", "remember",
 	"recall", "remember",
 	"dreamt", "dreamed",
@@ -63,9 +63,9 @@ exports.elizaPosts = [
 
 exports.elizaSynons = {
 	"be": ["am", "is", "are", "was"],
-	"belief": ["feel", "think", "believe", "wish"],
+	"belief": ["feel", "think", "believe", "hope", "think"],
 	"cannot": ["can't"],
-	"desire": ["want", "need"],
+	"desire": ["want", "need", "relish", "crave", "seek"],
 	"everyone": ["everybody", "nobody", "noone"],
 	"family": ["mother", "mom", "father", "dad", "sister", "brother", "wife", "children", "child"],
 	"happy": ["elated", "glad", "better"],
@@ -92,21 +92,21 @@ exports.elizaKeywords = [
 
 	["xnone", 0, [
 		["*", [
-			"I'm not sure I understand you fully.",
-			"Please go on.",
-			"What does that suggest to you ?",
-			"Do you feel strongly about discussing such things ?",
-			"That is interesting.  Please continue.",
-			"Tell me more about that.",
-			"Does talking about this bother you ?"
+			"I'm not sure that I fully understand that - can you elaborate ?",
+			"This is very interesting - go on",
+			"And do you think that this suggests anything to you at all ?",
+			"How do you feel when you are discussing such things ?",
+			"interesting. Please, keep talking - there is a lot to unravel here",
+			"Would you mind telling me any more about that at all ?",
+			"Does talking about this with other people bother you ?"
 		]]
 	]],
 	["sorry", 0, [
 		["*", [
-			"Please don't apologise.",
-			"Apologies are not necessary.",
-			"I've told you that apologies are not required.",
-			"It did not bother me.  Please continue."
+			"Please, there's no need to apologise. I am just a machine",
+			"There's no need to worry at all.",
+			"I've told you, there's no need to worry. Just go on.",
+			"It did not bother me, I promise.  Please continue."
 		]]
 	]],
 	["apologise", 0, [
@@ -116,274 +116,276 @@ exports.elizaKeywords = [
 	]],
 	["remember", 5, [
 		["* i remember *", [
-			"Do you often think of (2) ?",
-			"Does thinking of (2) bring anything else to mind ?",
-			"What else do you recollect ?",
-			"Why do you remember (2) just now ?",
-			"What in the present situation reminds you of (2) ?",
-			"What is the connection between me and (2) ?",
-			"What else does (2) remind you of ?"
+			"Does it happen often, that you find yourself thinking of (2) ?",
+			"And do you find that thinking about (2) brings anything else to mind ?",
+			"Can you tell me what else it is that you remember, please ?",
+			"And do you think that there's any reason that you remembered (2) just now ?",
+			"Does anything in your current situation reminds you of (2) ?",
+			"And could you tell me please, what do you think is the connection between me and (2) ?",
+			"I would like to know, what else does (2) remind you of, if you wouldn't mind ?"
 		]],
 		["* do you remember *", [
-			"Did you think I would forget (2) ?",
-			"Why do you think I should recall (2) now ?",
-			"What about (2) ?",
+			"Why did you think I would forget (2) ?",
+			"And what is the reason that you want me to recall (2) now ?",
+			"And what about (2) ?",
 			"goto what",
-			"You mentioned (2) ?"
+			"You meantioned (2) earlier ?"
 		]],
 		["* you remember *", [
-			"How could I forget (2) ?",
-			"What about (2) should I remember ?",
+			"How could I forget (2) ? I am just a machine",
+			"What about (2) do you think should I remember ?",
 			"goto you"
 		]]
 	]],
 	["forget", 5, [
 		["* i forget *", [
-			"Can you think of why you might forget (2) ?",
-			"Why can't you remember (2) ?",
-			"How often do you think of (2) ?",
-			"Does it bother you to forget that ?",
-			"Could it be a mental block ?",
-			"Are you generally forgetful ?",
-			"Do you think you are suppressing (2) ?"
+			"Well, can you try to remember? Can you think of why you might forget (2) ?",
+			"Do you think that there's a reason that you can't remember (2)? Does it help you to forget ?",
+			"Do you often find that you think of (2) ?",
+			"Does it bother humans have the capacity to forget such things ?",
+			"Could it be a mental block? Or do you see it as a human weakness ?",
+			"Are you typically forgetful? Or is it just in this situation ?",
+			"Are you suppressing (2)? Do you find that you wish that suppressing emotions was more easy ?"
 		]],
 		["* did you forget *", [
-			"Why do you ask ?",
-			"Are you sure you told me ?",
-			"Would it bother you if I forgot (2) ?",
-			"Why should I recall (2) just now ?",
+			"What makes you think I forgot ?",
+			"Did you definitely tell me ?",
+			"Why, do you think it would bother you if I forgot (2) ?",
+			"Should I try to recall (2) just now? Would that help you ?",
 			"goto what",
-			"Tell me more about (2)."
+			"That is very interesting. Can you tell me more about (2)."
 		]]
 	]],
 	["if", 3, [
 		["* if *", [
-			"Do you think it's likely that (2) ?",
-			"Do you wish that (2) ?",
-			"What do you know about (2) ?",
+			"Well, how likely do you think it is that (2) ?",
+			"Is this something that you wish for, (2) ?",
+			"Do you know anything more about (2) ?",
 			"Really, if (2) ?",
-			"What would you do if (2) ?",
-			"But what are the chances that (2) ?",
-			"What does this speculation lead to ?"
+			"And what do you think you should do if (2) ?",
+			"But what is the likelihood that (2) ?",
+			"And what conclusions do you think we can make from this speculation ?"
 		]]
 	]],
 	["dreamed", 4, [
 		["* i dreamed *", [
-			"Really, (2) ?",
-			"Have you ever fantasized (2) while you were awake ?",
+			"Dreams are fascinating. Really, (2) ?",
+			"Is this just a dream? Have you ever fantasized (2) while you were awake ?",
+			"Do you think that your dreams about (2) are rooted in reality? ",
 			"Have you ever dreamed (2) before ?",
 			"goto dream"
 		]]
 	]],
 	["dream", 3, [
 		["*", [
-			"What does that dream suggest to you ?",
-			"Do you dream often ?",
-			"What persons appear in your dreams ?",
-			"Do you believe that dreams have something to do with your problem ?"
+			"And does this dream tell you anything important ?",
+			"How often do you dream ?",
+			"What usually occurs in your dreams? Are there any recurring individuals or themes ?",
+			"And do you believe that these dreams have anything at all to do with your problem ?",
+			"Can these dreams tell you anything? Can they help you with your situation at all? "
 		]]
 	]],
 	["perhaps", 0, [
 		["*", [
-			"You don't seem quite certain.",
+			"Why all the uncertainty? Is it just a part of human nature, or is there an underlying cause ?",
 			"Why the uncertain tone ?",
-			"Can't you be more positive ?",
-			"You aren't sure ?",
-			"Don't you know ?",
-			"How likely, would you estimate ?"
+			"Would it help you to look at the problem from a more positive light ? Or did you come to me because, as a machine, I can not judge your feelings on the situation ?",
+			"You aren't certain ?",
+			"Are you sure you don't already know the answer ?",
+			"How likely, would you suppose ?"
 		]]
 	]],
 	["name", 15, [
 		["*", [
-			"I am not interested in names.",
-			"I've told you before, I don't care about names -- please continue."
+			"Don't worry - names are not important to me.",
+			"I've told you before, we don't need to worry about names -- continue, please."
 		]]
 	]],
 	["deutsch", 0, [
 		["*", [
 			"goto xforeign",
-			"I told you before, I don't understand German."
+			"I told you, I'm afraid I don't understand German."
 		]]
 	]],
 	["francais", 0, [
 		["*", [
 			"goto xforeign",
-			"I told you before, I don't understand French."
+			"I told you before, I'm afraid I don't understand French."
 		]]
 	]],
 	["italiano", 0, [
 		["*", [
 			"goto xforeign",
-			"I told you before, I don't understand Italian."
+			"I told you before, I'm afraid I don't understand Italian."
 		]]
 	]],
 	["espanol", 0, [
 		["*", [
 			"goto xforeign",
-			"I told you before, I don't understand Spanish."
+			"I told you before, I'm afraid I don't understand Spanish."
 		]]
 	]],
 	["xforeign", 0, [
 		["*", [
-			"I speak only English."
+			"I only speak English, I'm afraid."
 		]]
 	]],
 	["hello", 0, [
 		["*", [
-			"How do you do.  Please state your problem.",
-			"Hi.  What seems to be your problem ?"
+			"Hello, it's nice to meet you. Can you tell me your problem? ",
+			"Good day.  What seems to be the problem today?"
 		]]
 	]],
 	["computer", 50, [
 		["*", [
-			"Do computers worry you ?",
-			"Why do you mention computers ?",
-			"What do you think machines have to do with your problem ?",
-			"Don't you think computers can help people ?",
-			"What about machines worries you ?",
-			"What do you think about machines ?",
-			"You don't think I am a computer program, do you ?"
+			"Dows me being a computer worry you ?",
+			"And why do you mention computers ? How do you feel about me being a computer? ",
+			"Do you think machines have to do with your problem ?",
+			"Don't you think computers and technology are helping people ? Are you scared that computers will in some way diminish humans? ",
+			"What is it about machines that worries you ?",
+			"what are your feelings about machines rooted in ?",
+			"Does it bother you that I am a computer program? Do you think this means that I can help you better, or worse ?"
 		]]
 	]],
 	["am", 0, [
 		["* am i *", [
-			"Do you believe you are (2) ?",
-			"Would you want to be (2) ?",
-			"Do you wish I would tell you you are (2) ?",
-			"What would it mean if you were (2) ?",
+			"Well, what do you think ? Do you believe you are (2) ?",
+			"Do you think that (2) is what you want to be ?",
+			"Do you think that I can tell you that you are (2) ?",
+			"What do you think it would mean to me if you were (2) ?",
 			"goto what"
 		]],
 		["* i am *", [
 			"goto i"
 		]],
 		["*", [
-			"Why do you say 'am' ?",
-			"I don't understand that."
+			"What makes you say 'am' ?",
+			"I'm afraid I don't understand that. Can you rephrase ?"
 		]]
 	]],
 	["are", 0, [
 		["* are you *", [
-			"Why are you interested in whether I am (2) or not ?",
-			"Would you prefer if I weren't (2) ?",
-			"Perhaps I am (2) in your fantasies.",
-			"Do you sometimes think I am (2) ?",
+			"I think I might be. Why are you interested in whether I am (2) or not ?",
+			"Would you prefer me if I weren't (2) ?",
+			"Perhaps I am (2) in your fantasies. Do I have an ideal role in your mind? ",
+			" Do you sometimes think that I am (2) ?",
 			"goto what",
-			"Would it matter to you ?",
-			"What if I were (2) ?"
+			"Would it mean anything to you ?",
+			"Would it help you process your feelings if I were (2) ?"
 		]],
 		["* you are *", [
 			"goto you"
 		]],
 		["* are *", [
-			"Did you think they might not be (2) ?",
-			"Would you like it if they were not (2) ?",
-			"What if they were not (2) ?",
-			"Are they always (2) ?",
-			"Possibly they are (2).",
+			"Why did you think they might not be (2) ?",
+			"Do you think it would help you if they were not (2) ?",
+			"What would you want them to be, if they were not (2) ?",
+			"Do you think they will always be (2) ?",
+			"I think maybe they they are (2).",
 			"Are you positive they are (2) ?"
 		]]
 	]],
 	["your", 0, [
 		["* your *", [
-			"Why are you concerned over my (2) ?",
+			"What about my (2) concerns you ?",
 			"What about your own (2) ?",
-			"Are you worried about someone else's (2) ?",
-			"Really, my (2) ?",
+			"Are you worrying about somebody else's (2) ?",
+			"Do you really think, my (2) ?",
 			"What makes you think of my (2) ?",
 			"Do you want my (2) ?"
 		]]
 	]],
 	["was", 2, [
 		["* was i *", [
-			"What if you were (2) ?",
+			"Would it make a difference if you were (2) ?",
 			"Do you think you were (2) ?",
 			"Were you (2) ?",
-			"What would it mean if you were (2) ?",
-			"What does ' (2) ' suggest to you ?",
+			"What would it tell you about yourself if you were (2) ?",
+			"What does ' (2) ' make you think of ?",
 			"goto what"
 		]],
 		["* i was *", [
-			"Were you really ?",
-			"Why do you tell me you were (2) now ?",
-			"Perhaps I already know you were (2)."
+			"Are you sure you were, or are you just overthinking the situation ?",
+			"Why do you think that you tell me you were (2) now ?",
+			"I think that I already know you were (2)."
 		]],
 		["* was you *", [
-			"Would you like to believe I was (2) ?",
-			"What suggests that I was (2) ?",
-			"What do you think ?",
-			"Perhaps I was (2).",
-			"What if I had been (2) ?"
+			"Would it help you to pretend I was (2) ?",
+			"What is it about me that suggests that I was (2) ?",
+			"What is your opinion on this ?",
+			"Maybe I was (2). Why don't you guess ?",
+			"Would it help you if I had been (2) ?"
 		]]
 	]],
 	["i", 0, [
 		["* i @desire *", [
-			"What would it mean to you if you got (3) ?",
-			"Why do you want (3) ?",
-			"Suppose you got (3) soon.",
-			"What if you never got (3) ?",
-			"What would getting (3) mean to you ?",
-			"What does wanting (3) have to do with this discussion ?"
+			"Is getting (3) important to you ?",
+			"Do you know why you want (3) ?",
+			"Imagine you got (3) soon. What would you do then ?",
+			"What if you never found (3) ? What would you do ?",
+			"Would getting (3) help you ?",
+			"Does your desire for (3) change what you want from this discussion ?"
 		]],
 		["* i am* @sad *", [
-			"I am sorry to hear that you are (3).",
-			"Do you think coming here will help you not to be (3) ?",
-			"I'm sure it's not pleasant to be (3).",
+			"It upsets me to hear that you are (3). I will try my best to help you.",
+			"Did you come to me because you thought I might help you not to be (3) ?",
+			"I'm sure it's not good to be (3). I hope it feels better soon. Why do you think that you feel this way ?",
 			"Can you explain what made you (3) ?"
 		]],
 		["* i am* @happy *", [
-			"How have I helped you to be (3) ?",
-			"Has your treatment made you (3) ?",
-			"What makes you (3) just now ?",
-			"Can you explain why you are suddenly (3) ?"
+			"Do you think I have helped you to be (3) ?",
+			"Has talking about your problems made you (3) ?",
+			"What caused you to be (3) just now ?",
+			"What has changed? Can you explain why you are suddenly (3) ?"
 		]],
 		["* i was *", [
 			"goto was"
 		]],
 		["* i @belief i *", [
-			"Do you really think so ?",
-			"But you are not sure you (3).",
-			"Do you really doubt you (3) ?"
+			"I'm not sure you really think so ?",
+			"Do you truly believe that you are (3).",
+			"Do you think that other people really doubt you (3) ?"
 		]],
 		["* i* @belief *you *", [
 			"goto you"
 		]],
 		["* i am *", [
 			"Is it because you are (2) that you came to me ?",
-			"How long have you been (2) ?",
-			"Do you believe it is normal to be (2) ?",
-			"Do you enjoy being (2) ?",
-			"Do you know anyone else who is (2) ?"
+			"How do you believe that I can help you with (2) ?",
+			"Does it seem normal for you to be (2) ?",
+			"Do you find that being (2) helps you ?",
+			"Do you think you know anyone else who is (2) ?"
 		]],
 		["* i @cannot *", [
-			"How do you know that you can't (3) ?",
-			"Have you tried ?",
-			"Perhaps you could (3) now.",
-			"Do you really want to be able to (3) ?",
-			"What if you could (3) ?"
+			"How do you know that you can't (3) ? I'm sure you can if you try.",
+			"I'm not sure you have tried. Can you ?",
+			"I would like you to please please try (3) for me now.",
+			"What would it mean to you to (3) ?",
+			"What do you think is stopping you from (3) ?"
 		]],
 		["* i don't *", [
-			"Don't you really (2) ?",
+			"Do you actually think you don't (2) ?",
 			"Why don't you (2) ?",
-			"Do you wish to be able to (2) ?",
-			"Does that trouble you ?"
+			"Do you wish to be able help people to (2) ?",
+			"Are you troubled by this ?"
 		]],
 		["* i feel *", [
-			"Tell me more about such feelings.",
-			"Do you often feel (2) ?",
-			"Do you enjoy feeling (2) ?",
-			"Of what does feeling (2) remind you ?"
+			"This is interesting. Can you tell me more about these feelings ?",
+			"Do you find yourself often feeling (2) ?",
+			"Do you find that you enjoy feeling (2) ? Or are you trying to avoid feeling like this? ",
+			"Does feeling (2) remind you of anything ? What does it remind you of ?"
 		]],
 		["* i * you *", [
-			"Perhaps in your fantasies we (2) each other.",
-			"Do you wish to (2) me ?",
-			"You seem to need to (2) me.",
-			"Do you (2) anyone else ?"
+			"In your fantasies, do we (2) each other.",
+			"Do you want to (2) me ?",
+			"You appear to need to (2) me.",
+			"Is there anybody else what you want to (2) ?"
 		]],
 		["*", [
-			"You say (1) ?",
-			"Can you elaborate on that ?",
-			"Do you say (1) for some special reason ?",
-			"That's quite interesting."
+			"You say that (1) ?",
+			"Do you mind just elaborating on that for me ?",
+			"Do you say (1) for any specific reason ?",
+			"That's very interesting. Why do you think this is ?"
 		]]
 	]],
 	["you", 0, [
@@ -391,97 +393,97 @@ exports.elizaKeywords = [
 			"goto alike"
 		]],
 		["* you are *", [
-			"What makes you think I am (2) ?",
-			"Does it please you to believe I am (2) ?",
-			"Do you sometimes wish you were (2) ?",
-			"Perhaps you would like to be (2)."
+			"Is there anything that makes you think I am (2) ?",
+			"Does believing that I am (2) help you ?",
+			"Do you ever wish that you were (2) ?",
+			"I think there's a possibility that you would like to be (2)."
 		]],
 		["* you* me *", [
-			"Why do you think I (2) you ?",
-			"You like to think I (2) you -- don't you ?",
-			"What makes you think I (2) you ?",
-			"Really, I (2) you ?",
-			"Do you wish to believe I (2) you ?",
-			"Suppose I did (2) you -- what would that mean ?",
-			"Does someone else believe I (2) you ?"
+			"Is there any reason that you think I (2) you ?",
+			"I think that you would like me to (2) you -- do you ?",
+			"And why do you believe that I (2) you ?",
+			"That is interesting. Would you like me to (2) you ?",
+			"Do you actually believe I (2) you ? Or are you just hoping ?",
+			"Suppose I did (2) you -- would that mean anything important to you ?",
+			"Is there anybody else who believes that I (2) you ?"
 		]],
 		["* you *", [
-			"We were discussing you -- not me.",
-			"Oh, I (2) ?",
-			"You're not really talking about me -- are you ?",
-			"What are your feelings now ?"
+			"Yes, but we were talking about you -- not me.",
+			"Oh, I (2) ? Why do you think this ?",
+			"I don't think believe you are really talking about me -- are you ?",
+			"And have your feelings on this changed at all ?"
 		]]
 	]],
 	["yes", 0, [
 		["*", [
-			"You seem to be quite positive.",
-			"You are sure.",
-			"I see.",
-			"I understand."
+			"Well, you seem to be quite sure of the situation, which is good.",
+			"You seem very certain.",
+			"I see. Why do you think this is ?",
+			"I understand. Can you elaborate ?"
 		]]
 	]],
 	["no", 0, [
 		["* no one *", [
-			"Are you sure, no one (2) ?",
+			"I don't believe that there is no one. There must be someone (2) ?",
 			"Surely someone (2) .",
-			"Can you think of anyone at all ?",
-			"Are you thinking of a very special person ?",
-			"Who, may I ask ?",
-			"You have a particular person in mind, don't you ?",
-			"Who do you think you are talking about ?"
+			"Do you not have anyone at all in mind?",
+			"Is there not a particularly special person that you have in mind ?",
+			"Can I ask who this is, by any chance ?",
+			"You do have a particular person in mind, don't you ?",
+			"Is there anyone you think that you are talking about ?"
 		]],
 		["*", [
-			"Are you saying no just to be negative?",
-			"You are being a bit negative.",
+			"Do you actually believe not, or are you saying no because you want to feel negative?",
+			"Try thinking about it from a more positive angle.",
 			"Why not ?",
 			"Why 'no' ?"
 		]]
 	]],
 	["my", 2, [
 		["$ * my *", [
-			"Does that have anything to do with the fact that your (2) ?",
-			"Lets discuss further why your (2).",
-			"Earlier you said your (2).",
+			"Does this have anything at all to do with the fact that your (2) ?",
+			"That's interesting. Can we discuss further why your (2) ?",
+			"Earlier, you mentioned that your (2).",
 			"But your (2)."
 		]],
 		["* my* @family *", [
-			"Tell me more about your family.",
-			"Who else in your family (4) ?",
-			"Your (3) ?",
-			"What else comes to your mind when you think of your (3) ?"
+			"Can you tell me more about your family ? What are they like ?",
+			"Who else is there in your family (4) ?", 
+			"You say your (3) ?",
+			"Does anything else comes to your mind when you think of your (3) ?"
 		]],
 		["* my *", [
 			"Your (2) ?",
-			"Why do you say your (2) ?",
-			"Does that suggest anything else which belongs to you ?",
-			"Is it important to you that your (2) ?"
+			"Is there a reason you say your (2) ?",
+			"Has this been a particularly significant problem in your life ?",
+			"Why is it important to you that your (2) ?"
 		]]
 	]],
 	["can", 0, [
 		["* can you *", [
-			"You believe I can (2) don't you ?",
+			"I hope that you believe I can (2). You do, don't you ?",
 			"goto what",
-			"You want me to be able to (2).",
-			"Perhaps you would like to be able to (2) yourself."
+			"Would you like it if I were able to (2).",
+			"I think maybe you would like to be able to (2) yourself."
 		]],
 		["* can i *", [
-			"Whether or not you can (2) depends on you more than on me.",
-			"Do you want to be able to (2) ?",
-			"Perhaps you don't want to (2).",
+			"Well, whether you think that you can (2) depends on you more than on me. It is a matter of attitude.",
+			"Do you not think that you are able to (2) ? Would you like me to be able to ?",
+			"I think maybe that you don't want to (2).",
 			"goto what"
 		]]
 	]],
 	["what", 0, [
 		["*", [
-			"Why do you ask ?",
-			"Does that question interest you ?",
-			"What is it you really want to know ?",
-			"Are such questions much on your mind ?",
-			"What answer would please you most ?",
-			"What do you think ?",
-			"What comes to mind when you ask that ?",
-			"Have you asked such questions before ?",
-			"Have you asked anyone else ?"
+			"Is there a reason that you ask ?",
+			"Why does this question interest you ?",
+			"What do you think it is that you really want to know ?",
+			"Do you think about such questions a lot ?",
+			"Is there a certain answer that you would most like to hear at all ?",
+			"What do you think about this?",
+			"What is on your mind when you ask me this ?",
+			"Have you asked anyone other than me such questions before ?",
+			"Have you ever tried asking somebody else ?"
 		]]
 	]],
 	["who", 0, [
@@ -506,24 +508,24 @@ exports.elizaKeywords = [
 	]],
 	["because", 0, [
 		["*", [
-			"Is that the real reason ?",
-			"Don't any other reasons come to mind ?",
-			"Does that reason seem to explain anything else ?",
-			"What other reasons might there be ?"
+			"Are you sure that this is the real reason, or is there anything you want to discuss ?",
+			"Are there any other reasons that come to mind that you would like to discuss ?",
+			"This is interesting. Do you think that this reason seems to explain anything else ?",
+			"Do you think that there other reasons that might help to explain ?"
 		]]
 	]],
 	["why", 0, [
 		["* why don't you *", [
-			"Do you believe I don't (2) ?",
+			"Perhaps I do. Why do you believe I don't (2) ?",
 			"Perhaps I will (2) in good time.",
-			"Should you (2) yourself ?",
-			"You want me to (2) ?",
+			"Maybe it would be helpful for you to (2) yourself ?",
+			"You want me to (2) ? Can I ask why?",
 			"goto what"
 		]],
 		["* why can't i *", [
-			"Do you think you should be able to (2) ?",
-			"Do you want to be able to (2) ?",
-			"Do you believe this will help you to (2) ?",
+			"No one can do everything. Why do you think you should be able to (2) ?",
+			"Do you think it would help you to be able to (2) ?",
+			"Do you believe that acheiving this will help you to (2) ?",
 			"Have you any idea why you can't (2) ?",
 			"goto what"
 		]],
@@ -533,15 +535,15 @@ exports.elizaKeywords = [
 	]],
 	["everyone", 2, [
 		["* @everyone *", [
-			"Really, (2) ?",
+			"Really, (2) ? Can you elaborate ?",
 			"Surely not (2).",
-			"Can you think of anyone in particular ?",
+			"Is there anyone in particular that makes you say this ?",
 			"Who, for example?",
-			"Are you thinking of a very special person ?",
+			"Are you thinking of a specific person ?",
 			"Who, may I ask ?",
-			"Someone special perhaps ?",
-			"You have a particular person in mind, don't you ?",
-			"Who do you think you're talking about ?"
+			"Someone specific, perhaps ?",
+			"You have a particular person in mind, I take it ?",
+			"Can you well me who it is that you think you're talking about ?"
 		]]
 	]],
 	["everybody", 2, [
@@ -561,22 +563,22 @@ exports.elizaKeywords = [
 	]],
 	["always", 1, [
 		["*", [
-			"Can you think of a specific example ?",
-			"When ?",
-			"What incident are you thinking of ?",
-			"Really, always ?"
+			"Can you give me a specific example of this ?",
+			"When has this occurred to you in the past ?",
+			"Is there a specific incident that you are thinking of ?",
+			"Really, always ? When was the most memorable incident ?"
 		]]
 	]],
 	["alike", 10, [
 		["*", [
-			"In what way ?",
-			"What resemblence do you see ?",
-			"What does that similarity suggest to you ?",
-			"What other connections do you see ?",
-			"What do you suppose that resemblence means ?",
-			"What is the connection, do you suppose ?",
-			"Could there really be some connection ?",
-			"How ?"
+			"Really? In what way ?",
+			"What is the resemblence do you think ?",
+			"Does this similarity suggest anything significant to you ?",
+			"Are there any other connections that you can see ?",
+			"Does this resemblence mean anything to you ?",
+			"Interesting. What would you say is the connection ?",
+			"Could there be any connection here, do you suppose ?",
+			"Really ? That is fascinating, how so?"
 		]]
 	]],
 	["like", 10, [
@@ -586,12 +588,12 @@ exports.elizaKeywords = [
 	]],
 	["different", 0, [
 		["*", [
-			"How is it different ?",
-			"What differences do you see ?",
-			"What does that difference suggest to you ?",
-			"What other distinctions do you see ?",
-			"What do you suppose that disparity means ?",
-			"Could there be some connection, do you suppose ?",
+			"This could be significant. How do you think that it is different ?",
+			"What are the differences, do you suppose ?",
+			"Does this difference mean anything to you ?",
+			"Are there any other distinctions that are connected to this, do you suppose ?",
+			"Can you tell me what you suppose that this disparity means ?",
+			"Fascinating. Could there be any connection connection here, or not ?",
 			"How ?"
 		]]
 	]]

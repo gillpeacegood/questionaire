@@ -34,9 +34,9 @@ class Say extends Component {
   render() {
     if (!this.props.talking && !this.state.spokenOnce) { 
       meSpeak.speak(this.props.question, {
-        wordgap: 2, 
+        wordgap: 2.7, 
         pitch: 25,
-        speed: 140,
+        speed: 142,
       }, this.stoppedTalking);
       this.startedTalking();
     }

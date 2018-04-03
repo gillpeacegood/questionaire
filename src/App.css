@@ -1,8 +1,8 @@
 .App {
   text-align: center;
-  padding: 20px;
-  color: rgb(28, 128, 70);
-  font-size: 0.85em;
+  padding: 32px;
+  color: rgb(238, 244, 235);
+  font-size: 1.05em;
   font-family: 'Courier New', Courier, monospace
 }
 
@@ -13,8 +13,8 @@
 
 .App-header {
   height: 210px;
-  padding: 20px;
-  color: rgb(28, 128, 70);
+  padding: 30px;
+  color: rgb(238, 244, 235);
 }
 
 .Glowing {
@@ -22,7 +22,7 @@
 }
 
 .App-title {
-  font-size: 0.85em;
+  font-size: 1.45em;
   font-family: 'Courier New', Courier, monospace
 }
 
@@ -31,7 +31,7 @@
 }
 
 @keyframes App-header-scale {
-  0% { transform: scale(0.95, 0.95); color: rgb(28, 128, 70); }
-  50% { transform: scale(1, 1); color: rgb(15, 226, 103); }
-  100% { transform: scale(0.95, 0.95); color: rgb(28, 128, 70); }
+  0% { transform: scale(0.98, 1); color: rgb(238, 244, 235); }
+  50% { transform: scale(1, 1); color: rgb(171, 187, 173); }
+  100% { transform: scale(0.98, 1); color: rgb(238, 244, 235); }
 }
